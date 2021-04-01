@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import Customerlist from './components/Customerlist';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Tab from '@material-ui/core/Tab';
+import Tabs from '@material-ui/core/Tabs';
+
 import './App.css';
+import Traininglist from './components/Traininglist';
 
 function App() {
+  const [value, setValue] = useState('customers');
+
+  const handleChange = (event, value) => {
+    setValue(value);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppBar position="static" style={{ marginBottom: 20 }}>
+        <Toolbar>
+          <Typography variant="h6">
+            News
+          </Typography>
+          <Tabs value={value} onChange={handleChange}>
+            <Tab value="customers" label="Customers" />
+            <Tab value="trainings" label="Trainings" />
+          </Tabs>
+        </Toolbar>
+      </AppBar>
+      {value === 'customers' && <Customerlist />}
+      {value === 'trainings' && <Traininglist />}
     </div>
   );
 }
