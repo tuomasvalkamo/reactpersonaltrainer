@@ -5,6 +5,6 @@ This is an app made for Haaga-Helia front-end React course.
 ## Screenshots
 
 Customers page
-![Image of customers page](https://github.com/tuomasvalkamo/reactpersonaltrainer/img/customers.png?raw=true)
+![Image of customers page](https://github.com/tuomasvalkamo/reactpersonaltrainer/blob/main/img/customers.PNG)
 Trainings page
-![Image of trainings page](https://github.com/tuomasvalkamo/reactpersonaltrainer/img/trainings.png?raw=true)
+![Image of trainings page](https://github.com/tuomasvalkamo/reactpersonaltrainer/blob/main/img/trainings.PNG)
