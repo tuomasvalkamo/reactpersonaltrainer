@@ -21,7 +21,7 @@ function App() {
       <AppBar position="static" style={{ marginBottom: 20 }}>
         <Toolbar>
           <Typography variant="h6">
-            News
+            Personal Trainer App
           </Typography>
           <Tabs value={value} onChange={handleChange}>
             <Tab value="customers" label="Customers" />

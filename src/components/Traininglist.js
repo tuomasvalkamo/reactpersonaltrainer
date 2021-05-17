@@ -18,10 +18,30 @@ const Traininglist = () => {
       .catch(err => console.log(err));
   }
 
+  // Format date
+  const handleDate = (date) => {
+    const newDate = new Date(date);
+    const day = newDate.getDate()
+    const month = newDate.getMonth() + 1
+    const year = newDate.getFullYear()
+
+    return (
+      <div>
+        {`${day}.${month}.${year}`}
+      </div>
+    )
+  }
+
   const columns = [
-    { field: 'date', sortable: true, filterable: true },
-    { field: 'duration', sortable: true, filterable: true },
-    { field: 'activity', sortable: true, filterable: true }
+    {
+      field: 'date',
+      sortable: true,
+      filter: true,
+      cellRendererFramework: params =>
+        <div>{handleDate(params.data.date)}</div>
+    },
+    { field: 'duration', sortable: true, filter: true },
+    { field: 'activity', sortable: true, filter: true }
   ]
 
   return (

@@ -19,13 +19,13 @@ const Customerlist = () => {
   }
 
   const columns = [
-    { field: 'firstname', sortable: true, filterable: true },
-    { field: 'lastname', sortable: true, filterable: true },
-    { field: 'streetaddress', sortable: true, filterable: true },
-    { field: 'postcode', sortable: true, filterable: true },
-    { field: 'city', sortable: true, filterable: true },
-    { field: 'email', sortable: true, filterable: true },
-    { field: 'phone', sortable: true, filterable: true }
+    { field: 'firstname', sortable: true, filter: true },
+    { field: 'lastname', sortable: true, filter: true },
+    { field: 'streetaddress', sortable: true, filter: true },
+    { field: 'postcode', sortable: true, filter: true },
+    { field: 'city', sortable: true, filter: true },
+    { field: 'email', sortable: true, filter: true },
+    { field: 'phone', sortable: true, filter: true }
   ]
 
   return (
